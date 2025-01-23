@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../../assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../../assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../../assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: bold; // or 700
+  font-style: normal;
+}
+
 :host {
   display: block;
 
@@ -21,8 +42,9 @@
       position: relative;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 
-      &:before, &:after {
-        content: '';
+      &:before,
+      &:after {
+        content: "";
         display: block;
         width: var(--ds-banner-background-gradient-width);
         height: 100%;
@@ -31,19 +53,25 @@
       }
 
       &:before {
-        background: linear-gradient(to left, var(--ds-banner-text-background), transparent);
+        background: linear-gradient(
+          to left,
+          var(--ds-banner-text-background),
+          transparent
+        );
         left: calc(-1 * var(--ds-banner-background-gradient-width));
-
       }
 
       &:after {
-        background: linear-gradient(to right, var(--ds-banner-text-background), transparent);
+        background: linear-gradient(
+          to right,
+          var(--ds-banner-text-background),
+          transparent
+        );
         right: calc(-1 * var(--ds-banner-background-gradient-width));
       }
 
       background-color: var(--ds-banner-text-background);
     }
-
 
     small.credits {
       a {
@@ -59,6 +87,7 @@
 
   .jumbotron {
     background-color: transparent;
+    font-family: "Ubuntu", sans-serif;
   }
 
   a {
@@ -70,4 +99,10 @@
   }
 }
 
+.medium-text {
+  font-weight: 500;
+}
 
+.bold-text {
+  font-weight: bold;
+}
